@@ -1,0 +1,126 @@
+page{
+    width: 100%;
+}
+.view-top{
+    height:40px;
+    width: 100%;
+    padding:5px;
+    background-color: rgb(187,78,85);
+    color: white;
+    line-height: 40px;
+    display: inline-block;
+}
+.avatarImg{
+    float:left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;    
+}
+.topBar{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    margin-right: 10px
+}
+.barImg{
+    float:left;
+    width:30px;
+    height:30px;
+    margin-left: 20px;
+    line-height: 40px;
+    display: inline-block;
+}
+.name{
+    float: left;
+    margin-left: 10px;
+    display: inline-block;    
+}
+.weui-media-box{
+    padding:5px 15px;
+}
+
+/* tab2 */
+.nav{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height:40px;
+    padding: 5px;
+    border-bottom: 1px solid rgb(214,214,214);
+}
+.dailyImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.topText{
+    margin-left: 10px;
+    font-size:15px;
+    line-height: 30px;
+    color: rgb(102,102,102);
+}
+.item{
+    width: 100%;
+    height:45px;
+    display: flex;
+}
+.index{
+    width: 10%;
+    padding:5px;
+    text-align: center;
+}
+.rightView{
+    width: 90%;
+    padding: 5px;
+    border-bottom: 1px solid rgba(214,214,214,0.5);    
+}
+.song-title{
+    font-size:12px;
+}
+.singer{
+    font-size:10px;
+}
+.more{
+    height: 30px;
+    padding: 5px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color:rgb(187,78,85);
+}
+.more:hover{
+    color:grey;
+}
+.songList{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.songItem{
+    width:33.3%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.itemImg{
+    width: 100%;
+    height:140px;
+}
+@media screen and (max-height: 620px) {
+    .itemImg{
+        height:110px;
+    }
+}
+.songText{
+    font-size: 12px;
+    width: 100%;
+    height:40px;
+    overflow: hidden; 
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2; 
+    text-overflow: ellipsis;
+}

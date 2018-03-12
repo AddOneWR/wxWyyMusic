@@ -1,0 +1,69 @@
+<view>
+    <view class="view-top">
+        <image src="{{userInfo.profile.avatarUrl}}" class="avatarImg"></image>
+        <view class="name">{{userInfo.profile.nickname}}</view>
+        <view class="topBar">
+            <image src="{{firstImg}}"  class="barImg" bindtap="toMy"></image>
+            <image src="{{secondImg}}"  class="barImg" bindtap="toDaliy"></image>            
+        </view>
+    </view>
+    <view class="weui-panel__bd" wx:if="{{nowTab == 1}}">
+        <block wx:for="{{singList}}" wx:key="index">
+            <view url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" data-id="{{item.id}}" bindtap="toPlayList">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" src="{{item.coverImgUrl}}" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">{{item.name}}</view>
+                    <view class="weui-media-box__desc">{{item.trackCount}}首</view>
+                </view>
+            </view>
+        </block> 
+    </view> 
+    <view class="" wx:if="{{nowTab == 2}}">
+        <view class="topDaily nav">
+            <view><image src="../img/daily.png" class="dailyImg"></image></view>
+            <view class="topText">每日推荐</view>
+        </view>
+        <block wx:for="{{recommendSong}}" wx:key="index">
+            <view class="item" data-id="{{index}}" bindtap="toAudio" hidden="{{index >= max }}">
+                <view class="index">{{index+1}}</view>
+                <view class="rightView">
+                    <view class="song-title">{{item.name}}</view>
+                    <view class="singer">
+                        <text wx:for="{{item.song.artists}}" wx:key="index" style="margin-left:5px;color:gray">{{item.name}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="more" bindtap='more'>更多</view>
+        <view class="nav">
+            <view><image src="../img/songList.png" class="dailyImg" style="border-radius: 0"></image></view>
+            <view class="topText">推荐歌单</view>
+        </view>
+        <view class="songList">
+            <block wx:for="{{recommendList}}" wx:key="index">
+                <view class="songItem" wx:if="{{index < 3}}" data-id="{{item.id}}" bindtap="toPlayList">
+                    <view>
+                        <image src="{{item.picUrl}}" class="itemImg"></image>
+                    </view>
+                    <view class="songText">
+                        {{item.name}}
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="songList">
+            <block wx:for="{{recommendList}}" wx:key="index">
+                <view class="songItem" wx:if="{{index > 2 && index < 6}}" data-id="{{item.id}}" bindtap="toPlayList">
+                    <view>
+                        <image src="{{item.picUrl}}" class="itemImg"></image>
+                    </view>
+                    <view class="songText">
+                        {{item.name}}
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,88 @@
+.topView{
+    display: flex;
+}
+.topView{
+    height:180px;
+}
+.imgView{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+}
+.briefView{
+    padding:30px 5px;
+    width: 50%;
+}
+.name{
+    color:white;
+}
+.description{
+    width: 100%; 
+    color: black;
+    font-size:12px;
+    overflow: hidden; 
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3; 
+    text-overflow: ellipsis;
+}
+.imgView image{
+    width:120px;
+    height:120px;
+}
+.playAll{
+    width: 100%;
+    height:40px;
+    padding: 10px;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(214,214,214);
+}
+.playallImg{
+    width:20px;
+    height: 20px;
+    /* display: inline-block; */
+}
+.playallText{
+    /* display: inline-block; */
+    margin-left: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    color: gray;
+    font-family: '黑体';
+}
+.item{
+    width: 100%;
+    height:45px;
+    display: flex;
+}
+.index{
+    width: 10%;
+    padding:5px;
+    text-align: center;
+}
+.rightView{
+    width: 90%;
+    padding: 5px;
+    border-bottom: 1px solid rgba(214,214,214,0.5);    
+}
+.song-title{
+    font-size:12px;
+}
+.singer{
+    font-size:10px;
+}
+/* 背景模糊 */
+.bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    width: 100%;
+    height: 180px;
+    background:  no-repeat left top;
+    background-size: 110% 110%;
+    background-color: rgba(63,63,62,0.1);
+    filter: blur(20px)
+}

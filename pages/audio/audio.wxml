@@ -1,0 +1,54 @@
+<view class="bg" style="background-image: url({{song.al.picUrl}})"></view>
+<view class="body">
+    <view class="sing-brief">
+        <view class="sing-name">{{song.name}}</view>
+        <view class="singer-name">
+            <text wx:for="{{song.ar}}" wx:key="index" style="margin-left:10px">{{item.name}}</text>
+        </view>
+    </view>
+    <view class="sing-show">
+        <image src="../img/stick.png" hidden='{{showLrc}}' class="coverImgStick" animation="{{stickAnimation}}"></image>
+        <image src="../img/disk.png" class="coverImgBg" bindtap='change' hidden='{{showLrc}}' />
+        <image src="{{song.al.picUrl}}" class="coverImg" animation="{{animationData}}" bindtap='change' hidden='{{showLrc}}' />
+        <scroll-view class="lrcView" hidden='{{!showLrc}}' scroll-y='true' scroll-top="{{scroll}}" scroll-with-animation="true">
+            <view wx:for="{{lrc}}" wx:key="index" bindtap='change' class='lrc {{active[index]}}' id="{{index}}">
+                {{item}}
+            </view>
+        </scroll-view>
+    </view>
+    <view class="course-control-process">
+        <view class="control-top control-view">
+            <text class="current-process process">{{currentProcess}}</text>
+
+            <slider
+            bindchange="hanleSliderChange"   
+            bindtouchstart="handleSliderMoveStart"
+            bindtouchend="handleSliderMoveEnd"
+            min="0"
+            max="{{sliderMax}}"
+            activeColor="#BB4E55"
+            value="{{sliderValue}}"/>
+
+            <text class="total-process process">{{totalProcess}}</text>
+        </view>
+        <view class="control-bottom control-view">
+            <view class="control-bottom-view type">
+                <image src="../img/loop.png" bindtap='changePlay' hidden='{{loop}}'/>
+                <image src="../img/oneloop.png" bindtap='changePlay' hidden='{{oneloop}}'/>
+                <image src="../img/random.png" bindtap='changePlay' hidden='{{random}}'/>
+            </view>
+            <view class="control-bottom-view">
+                <image src="../img/pre.png" bindtap='pre'/>
+            </view>
+            <view class="control-bottom-view">
+                <image src="{{statusImg}}" bindtap="changeStatus" />
+            </view>   
+            <view class="control-bottom-view">
+                <image src="../img/next.png" bindtap='next'/>
+            </view>
+            <view class="control-bottom-view type">
+                <image src="../img/list.png" bindtap='surprise'/>
+            </view>
+        </view>
+    </view> 
+</view>

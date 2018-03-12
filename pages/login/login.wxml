@@ -1,0 +1,5 @@
+<view class="body">
+    <input class="phone" placeholder='手机号' placeholder-class="placeholder" bindinput='phone'/>
+    <input class="password" placeholder='密码' type='password' placeholder-class="placeholder" bindinput='password'/>
+    <button bindtap='isRoot' class="weui-btn" type='warn'>登录</button>
+</view>

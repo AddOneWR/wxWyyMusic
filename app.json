@@ -1,0 +1,16 @@
+{
+    "pages": [
+      "pages/login/login",
+      "pages/audio/audio",
+      "pages/main/main",
+      "pages/playList/playList",
+      "pages/index/index",
+      "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#BB4E55",
+        "navigationBarTitleText": "EasyMusic",
+        "navigationBarTextStyle": "white"
+    }
+}
