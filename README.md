@@ -12,11 +12,11 @@
 + 歌词滚动
 + ....
 
-![1.png](./gitImg/1.png)
-![2.png](./gitImg/2.png)
-![3.png](./gitImg/3.png)
-![4.png](./gitImg/4.png)
-![5.png](./gitImg/5.png)
+<img src='./gitImg/1.png' width='200' height='370' />
+<img src='./gitImg/2.png' width='200' height='370' />
+<img src='./gitImg/3.png' width='200' height='370' />
+<img src='./gitImg/4.png' width='200' height='370' />
+<img src='./gitImg/5.png' width='200' height='370' />
 
 ```
 直接微信开发者工具打开当前目录
